@@ -1,7 +1,7 @@
 
-import { combinedReducers} from 'redux'
+import { combineReducers} from 'redux'
 import {friendReducer as friends} from './friendReducer'
 
-export default combinedReducers({
+export default combineReducers({
     friends
 })
