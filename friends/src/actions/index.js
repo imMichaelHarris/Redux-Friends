@@ -26,3 +26,7 @@ export const logIn = (credentials) => dispatch =>{
 export const FETCH_FRIENDS_START = "FETCH_FRIENDS_START"
 export const FETCH_FRIENDS_SUCCESS = "FETCH_FRIENDS_SUCCESS"
 export const FETCH_FRIENDS_FAILED = "FETCH_FREINDS_FAILED"
+
+export const getFriends = () => dispatch => {
+    dispatch({type: FETCH_FRIENDS_START})
+}
