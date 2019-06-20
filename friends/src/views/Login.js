@@ -6,7 +6,11 @@ class Login extends React.Component {
   render() {
     return (
       <div>
-        <form />
+        <form>
+          <input type="text" name="username" value={this.state.username} onChange={handleChanges}/>
+          <input type="password" name="password" value={this.state.password} onChange={handleChanges} />
+
+        </form>
       </div>
     );
   }
