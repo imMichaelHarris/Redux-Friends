@@ -1,4 +1,4 @@
-import axios from 'axios';
+import {axiosWithAuth} from '../utility/axiosWithAuth'
 
 export const LOGIN_START = "LOGIN_START"
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS"
@@ -10,11 +10,13 @@ export const LOGIN_FAILED = "LOGIN_FAILED"
 
 export const logIn = (credentials) => dispatch =>{
     dispatch({type: LOGIN_START })
-    axios.post('http://localhost:5000/api/login', credentials)
+    return axiosWithAuth()
+    .post('/login', credentials)
     .then(res => {
         console.log(res.data.payload);
         localStorage.setItem('token', res.data.payload)
         dispatch({type: LOGIN_SUCCESS, payload: res.data})
+        return true;
     })
     .catch(err => {
         console.log(err)
