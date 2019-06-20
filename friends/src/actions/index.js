@@ -29,4 +29,8 @@ export const FETCH_FRIENDS_FAILED = "FETCH_FREINDS_FAILED"
 
 export const getFriends = () => dispatch => {
     dispatch({type: FETCH_FRIENDS_START})
+    axiosWithAuth()
+    .get('/friends')
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
 }
