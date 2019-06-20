@@ -1,11 +1,17 @@
-import React from 'reaact';
-import Friend from '../components/Friend'
+import React from "reaact";
+import Friend from "../components/Friend";
 
-const FriendsList = () => {
+class FriendsList extends React.Component {
+  state = {};
+
+  render() {
     return (
-        <div>
-            {this.props.friends.map(friend => <Friend key={friend.id} friend={friend} />)}
-        </div>
-    )
+      <div>
+        {this.props.friends.map(friend => (
+          <Friend key={friend.id} friend={friend} />
+        ))}
+      </div>
+    );
+  }
 }
-export default FriendsList
+export default FriendsList;
