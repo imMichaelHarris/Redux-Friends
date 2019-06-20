@@ -1,4 +1,6 @@
 import React from "react";
+import {connect} from 'react-redux';
+import {logIn} from '../actions'
 
 class Login extends React.Component {
   state = {
@@ -33,4 +35,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default connect(null, {logIn})(Login);
