@@ -31,6 +31,10 @@ export const getFriends = () => dispatch => {
     dispatch({type: FETCH_FRIENDS_START})
     axiosWithAuth()
     .get('/friends')
-    .then(res => console.log(res))
-    .catch(err => console.log(err))
+    .then(res => {
+        dispatch({type: FETCH_FRIENDS_SUCCESS, payload: res.data})
+    })
+    .catch(err => {
+        dispatch({type: FETCH_FRIENDS_FAILED, payload: err.response})
+    })
 }
