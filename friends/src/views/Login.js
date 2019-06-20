@@ -15,7 +15,8 @@ class Login extends React.Component {
   }
 
   login = e => {
-      e.preventDefault()
+      e.preventDefault();
+      this.props.logIn()
   }
 
   render() {
