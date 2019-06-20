@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import './index.css';
 import App from './App';
+import reducer from './reducers'
+import {store} from './store';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
