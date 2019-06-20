@@ -18,4 +18,10 @@ class FriendsList extends React.Component {
     );
   }
 }
-export default connect(null, {})(FriendsList);
+
+const mapStateToProps = state => {
+  return {
+    friends: state.friends.friends
+  }
+}
+export default connect(mapStateToProps, {})(FriendsList);

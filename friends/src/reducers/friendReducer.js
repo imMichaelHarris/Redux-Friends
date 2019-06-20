@@ -11,7 +11,7 @@ export const friendReducer = (state = initialState, action) => {
             return {
                 ...state,
                 fetching: true,
-                errors:
+                errors: ''
             }
         default: 
         return state;
