@@ -1,8 +1,12 @@
 import React from "reaact";
+import {connect} from 'react-redux'
 import Friend from "../components/Friend";
 
+
 class FriendsList extends React.Component {
-  state = {};
+  state = {
+      friends: []
+  };
 
   render() {
     return (
@@ -14,4 +18,4 @@ class FriendsList extends React.Component {
     );
   }
 }
-export default FriendsList;
+export default connect(null, {})(FriendsList);
