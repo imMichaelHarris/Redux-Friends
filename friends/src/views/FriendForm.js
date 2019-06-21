@@ -13,13 +13,20 @@ class TodoForm extends React.Component {
         })
     }
 
+    addFriend = e => {
+        e.preventDefault()
+    }
+
     render(){
         return (
             <div>
-                <form>
-                    <input type="text" name="name" value={this.state.name}/>
-                    <input type="number" name="age" value={this.state.age}/>
-                    <input type="email" name="email" value={this.state.email}/>
+                <form onSubmit={this.addFriend}>
+                    <label>Name:</label>
+                    <input type="text" name="name" value={this.state.name} onChange={this.handleChanges} />
+                    <label>Age:</label>
+                    <input type="number" name="age" value={this.state.age} onChange={this.handleChanges}/>
+                    <label>Email:</label>
+                    <input type="email" name="email" value={this.state.email} onChange={this.handleChanges}/>
 
                     <button>Add Friend</button>
                 </form>
