@@ -1,7 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import Login from "./views/Login";
-import Home from "./components/NavBar";
+import Home from "./components/Home";
 import PrivateRoute from "./utility/PrivateRoute";
 import FriendsContainer from "./views/FriendsContainer";
 import "./App.css";
