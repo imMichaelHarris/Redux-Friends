@@ -6,7 +6,7 @@ const FriendsContainer = () => {
   return (
     <div>
       <FriendsList />
-      {/* <FriendForm /> */}
+      <FriendForm />
     </div>
   );
 };

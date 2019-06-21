@@ -2,7 +2,9 @@ import React from 'react';
 
 class TodoForm extends React.Component {
     state = {
-        friendInput: ''
+        name: '',
+        age: '',
+        email: ''
     }
 
     handleChanges = e => {
@@ -15,7 +17,11 @@ class TodoForm extends React.Component {
         return (
             <div>
                 <form>
-                    <input type="text" name="friendInput" value={this.state.friendInput}/>
+                    <input type="text" name="name" value={this.state.name}/>
+                    <input type="number" name="age" value={this.state.age}/>
+                    <input type="email" name="email" value={this.state.email}/>
+
+                    <button>Add Friend</button>
                 </form>
             </div>
         )
