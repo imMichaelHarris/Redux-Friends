@@ -12,21 +12,26 @@ class FriendsList extends React.Component {
   
   }
   render() {
-    return (
-      <div>
-                <h1>I'm friends list</h1>
+    if(this.props.fetching){
+      return <h1>Loading....</h1>
+    } else {
+      return (
+        <div>
+  
+          {this.props.friends.map(friend => (
+            <Friend key={friend.id} friend={friend} />
+          ))}
+        </div>
+      );
+    }
 
-        {this.props.friends.map(friend => (
-          <Friend key={friend.id} friend={friend} />
-        ))}
-      </div>
-    );
   }
 }
 
 const mapStateToProps = state => {
   return {
-    friends: state.friends.friends
+    friends: state.friends.friends,
+    fetching: state.friends.fetching
   }
 }
 export default connect(mapStateToProps, {getFriends})(FriendsList);
