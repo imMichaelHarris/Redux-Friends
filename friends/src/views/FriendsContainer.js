@@ -6,8 +6,8 @@ const FriendsContainer = () => {
   return (
     <div>
       <h1>Friends Container</h1>
-      {/* <FriendsList />
-      <FriendForm /> */}
+      <FriendsList />
+      {/* <FriendForm /> */}
     </div>
   );
 };
