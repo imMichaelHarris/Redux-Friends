@@ -39,3 +39,13 @@ export const getFriends = () => dispatch => {
         dispatch({type: FETCH_FRIENDS_FAILED, payload: err.response})
     })
 }
+
+///////////////          ADD FRIEND         //////////////
+export const SAVING_FRIEND = "SAVING_FRIEND"
+export const UPDATING_FRIEND = "UPDATING_FRIEND"
+
+export const addFriends = info => dispatch => {
+    dispatch({type: SAVING_FRIEND})
+    axiosWithAuth()
+    .post('')
+}
